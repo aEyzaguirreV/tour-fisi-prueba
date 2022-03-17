@@ -1,0 +1,536 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #00ff5d;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+	width: 90%;
+	margin: auto;
+}
+
+
+
+
+header{
+	padding: 30px 0;
+    background-color: #99f509;
+    
+}
+
+header .contenedor{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    
+    padding-bottom: 20px;
+    
+}
+
+header .logotipo{
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a{
+	color: #aaa;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo{
+	
+	color: #091f4b;
+	 
+}
+
+/* ---- ----- ----- ciudad Principal ----- ----- ----- */
+.city-principal{
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../images/machu-picchu-2197157.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+.city-principal .contenedor{
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+.city-principal .titulo{
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.city-principal .descripcion{
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+}
+
+.city-principal .boton{
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.city-principal .boton:hover{
+	background: #fff;
+	color: #000;
+}
+
+.city-principal .boton i{
+	margin-right: 1.25em;
+}
+
+/* ---- ----- ----- Contenedor nombres y Controles ----- ----- ----- */
+.contenedor-titulo-controles{
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3{
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button{
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: red;
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.citys-recomendadas{
+	margin-bottom: 70px;
+}
+
+.citys-recomendadas .contenedor-principal{
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.citys-recomendadas .contenedor-principal .flecha-izquierda,
+.citys-recomendadas .contenedor-principal .flecha-derecha{
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.citys-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.citys-recomendadas .contenedor-principal .flecha-derecha:hover{
+	background: rgba(0,0,0, .9);
+}
+
+.citys-recomendadas .contenedor-principal .flecha-izquierda{
+	left: 0;
+}
+
+.citys-recomendadas .contenedor-principal .flecha-derecha{
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.citys-recomendadas .contenedor-carousel{
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.citys-recomendadas .contenedor-carousel .carousel{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.citys-recomendadas .contenedor-carousel .carousel .city{
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.citys-recomendadas .contenedor-carousel .carousel .city .hover{
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.citys-recomendadas .contenedor-carousel .carousel .city img{
+	width: 100%;
+	vertical-align: top;
+}
+
+
+
+.about{
+    
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    width: 100vw;
+    align-items:center; 
+}
+
+.about img{
+    width: 100%;
+	margin-left: 20px;
+    grid-column: 1/5;
+}
+
+.about-info{
+    grid-column: 5/10;
+    padding: 3em;
+}
+
+.about-info h2 {
+font-size: 2em;
+color: #091f4b;
+}
+
+.divider{
+    height: 4px;
+    width: 60px;
+    background-color: aqua;
+    margin-top: 5px;
+    margin-bottom: 1em;
+}
+
+.about .about-info p{
+    margin-bottom: 1em;
+}
+
+.leer-mas{
+	display: flex;
+    align-self: center;
+    justify-content: center;
+    margin: 1em;
+    width: 20%;
+	background-color: aqua;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69);
+	border-radius: 20px;
+}
+
+.portafolio-heading{
+width: 100vw;
+padding: 1em;
+
+}
+
+.portafolio-heading h2{
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.portafolio .container{
+    width: 80vw;
+    height: 41.5vh;
+    margin: 10px auto;
+    /*margin-bottom: 2px;*/
+    display: flex;
+    justify-content: center;
+    background-color:var(--fondo);
+}
+
+.card{
+    
+    margin:5px;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    background-color:rgb(255, 255, 2);
+    border-radius: 20px;
+    
+}
+
+.card-img{
+    width: 100%;
+    height: 150px;
+    /*background-image: url(../img/2-original.png);*/
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card-img img{
+    width: 100%;
+    height: 150px;
+    /*background-image: url(../img/2-original.png);*/
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card-title{
+    padding: 20px;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;   
+}
+
+.card-project-link{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-project-link a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.card-project-link i{
+    font-size: 1.5em;
+}
+
+.card .projects-details{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin: 1em;
+    width: 90%;
+	background-color: aqua;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69);
+	border-radius: 20px;
+
+}
+
+.card .projects-details a{
+    text-decoration: none;
+    color:#091f4b;
+    text-transform: uppercase;   
+}
+
+.container-contact{
+    margin:0 auto;
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+	justify-content: space-around;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+
+.container-contact img{
+	width: 60%;
+	height: 85%;
+	margin-bottom:25px;
+}
+
+.contact-headings h2{
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.contact-form{
+	width: 40%;
+	margin-left: 20px;
+}
+
+.contact-form h4{
+    font-size: 1.5em;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+}
+
+
+.form-group{
+    display: grid;
+}
+
+.form-group input{
+    padding: 2px auto;
+    margin-bottom: 10px ;
+    height: 30px;
+    background:none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.form-group textarea{
+    padding: 3px auto;
+    height: 70px;
+    background: none;border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.form-group button{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    width: 50%;
+	background-color: aqua;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69);
+	border-radius: 20px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+    background-color: aqua;
+
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content h2{
+    font-size: 3em;
+}
+.footer-content h5 {
+    font-size: 1.5em;
+}
+
+.sotial-network{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.footer-content h6{
+    font-size: 1em;
+}
+
+.sotial-network i{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px){
+	header .logotipo{
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.city-principal{
+		font-size: 14px;
+	}
+
+	.city-principal .descripcion{
+		max-width: 100%;
+	}
+
+	.citys-recomendadas .contenedor-carousel{
+		overflow: visible;
+	}
+
+	.citys-recomendadas .contenedor-carousel .carousel{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.citys-recomendadas .flecha-izquierda,
+	.citys-recomendadas .indicadores,
+	.citys-recomendadas .flecha-derecha{
+		display: none;
+	}
+
+	.portafolio .container{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+
+	.container-contact{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 20px;
+		margin-top: 10px;
+		overflow: visible
+
+	}
+
+	.contact-headings{
+		margin-top: 50%;
+	}
+
+	.container-contact img{
+		max-width: 100%;
+	}
+	
+	.contact-headings h2{
+		font-size: 2em;
+	}
+
+	
+	
+}
